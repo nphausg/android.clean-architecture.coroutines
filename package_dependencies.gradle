@@ -1,0 +1,9 @@
+apply from: '../android.submodules/deps/shared_dependencies.gradle'
+apply from: '../android.submodules/deps/di_dependencies.gradle'
+apply from: '../android.submodules/deps/test_dependencies.gradle'
+apply from: '../android.submodules/deps/network_dependencies.gradle'
+apply from: '../android.submodules/deps/navigation_dependencies.gradle'
+
+dependencies {
+    implementation project(path: ':mvvm-clean')
+}

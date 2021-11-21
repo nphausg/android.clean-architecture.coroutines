@@ -1,0 +1,4 @@
+rootProject.name = "android.architecture.coroutines"
+include ':mvvm-clean'
+include ':app'
+project(':mvvm-clean').projectDir = new File('android.submodules/mvvm-clean')

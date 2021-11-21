@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: 'android.submodules/deps/versions.gradle'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5'
+        classpath deps.kotlin.plugin
+        classpath deps.kotlin.allopen
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+    afterEvaluate {
+        tasks.withType(JavaCompile.class) {
+            options.compilerArgs << "-Xmaxerrs" << "10000"
+        }
+        if (project.plugins.hasPlugin("kotlin-kapt")) {
+            kapt {
+                javacOptions {
+                    option("-Xmaxerrs", 10000)
+                }
+            }
+        }
+    }
+}
+task clean(type: Delete) {
+    println " --> LOOKING FOR 'build' folders to delete ..."
+    delete rootProject.buildDir
+    println " --> REMOVED 'build' folders completely"
+}
+
+task zipAll(type: Zip) {
+    archiveBaseName = rootProject.name
+    from(rootDir) {
+        exclude '**/.idea/**'
+        exclude '**/build/**'
+        exclude '.gradle/**'
+        exclude '**/*.iml'
+        exclude '**/*.dll'
+        exclude '**/*.so'
+        exclude '**/local.properties'
+    }
+    destinationDirectory = file("$buildDir/dist")
+}
+
+//Skip unused gradle task
+gradle.taskGraph.whenReady { graph ->
+    graph.allTasks.findAll { it.name ==~ /uploadCrashlyticsMappingFileRelease.*/ }*.enabled = false
+}
+
+task copyApks(type: Copy) {
+    from("$buildDir/outputs/apk") {
+        exclude '**/*unsigned.apk', '**/*unaligned.apk'
+    }
+    into '../apks'
+}

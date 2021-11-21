@@ -1,0 +1,3 @@
+[submodule "android.submodules"]
+	path = android.submodules
+	url = git@github.com:nphau/android.submodules.git
