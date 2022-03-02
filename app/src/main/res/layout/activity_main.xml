@@ -27,13 +27,13 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="72dp"
             android:layout_height="72dp"
-            android:layout_margin="@dimen/margin_large"
             app:srcCompat="@mipmap/ic_launcher" />
 
         <com.google.android.material.textview.MaterialTextView
             style="@style/Clean.Theme.Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_large"
             android:gravity="center"
             android:text="@string/common_owner" />
 

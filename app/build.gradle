@@ -46,14 +46,14 @@ android {
             signingConfig signingConfigs.release
             debuggable true
             manifestPlaceholders = [crashlyticsEnabled: true, analyticsEnabled: true]
-            resValue("string", "app_name", "Clean")
+            resValue("string", "app_name", "android.templates")
         }
         debug {
             minifyEnabled false
             signingConfig signingConfigs.debug
             manifestPlaceholders = [crashlyticsEnabled: false, analyticsEnabled: false]
             debuggable true
-            resValue("string", "app_name", "DEV.Clean")
+            resValue("string", "app_name", "android.templates")
         }
     }
 
