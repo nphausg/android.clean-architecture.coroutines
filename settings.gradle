@@ -1,4 +1,4 @@
-rootProject.name = "android.architecture.coroutines"
-include ':mvvm-clean'
+rootProject.name = "android.clearn-architecture.coroutines"
+include ':mvvm-shared'
 include ':app'
-project(':mvvm-clean').projectDir = new File('android.submodules/mvvm-clean')
+project(':mvvm-shared').projectDir = new File('android.submodules/mvvm-shared')

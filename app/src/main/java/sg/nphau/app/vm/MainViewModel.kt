@@ -1,8 +1,8 @@
-package com.nphau.app.vm
+package sg.nphau.app.vm
 
-import com.nphau.android.shared.udf.UICommand
-import com.nphau.android.shared.udf.UIState
-import com.nphau.android.shared.vm.SharedViewModel
+import sg.nphau.android.shared.udf.UICommand
+import sg.nphau.android.shared.udf.UIState
+import sg.nphau.android.shared.vm.SharedViewModel
 
 class MainState : UIState
 class MainCommand : UICommand

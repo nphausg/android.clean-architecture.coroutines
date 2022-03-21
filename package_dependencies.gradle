@@ -5,5 +5,5 @@ apply from: '../android.submodules/deps/network_dependencies.gradle'
 apply from: '../android.submodules/deps/navigation_dependencies.gradle'
 
 dependencies {
-    implementation project(path: ':mvvm-clean')
+    implementation project(path: ':mvvm-shared')
 }

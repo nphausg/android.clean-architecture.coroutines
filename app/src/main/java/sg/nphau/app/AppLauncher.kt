@@ -1,16 +1,16 @@
-package com.nphau.app
+package sg.nphau.app
 
 import android.content.Context
-import com.nphau.android.Launcher
-import com.nphau.android.shared.PluginInitializer
-import com.nphau.android.shared.di.SharedDI
-import com.nphau.android.shared.ui.theme.ThemeUtils
-import com.nphau.app.libs.CrashlyticsLoggingTree
+import sg.nphau.android.Launcher
+import sg.nphau.android.shared.PluginInitializer
+import sg.nphau.android.shared.di.SharedDI
+import sg.nphau.android.shared.ui.theme.ThemeUtils
+import sg.nphau.app.libs.CrashlyticsLoggingTree
 import org.koin.core.module.Module
 import org.koin.dsl.module
 import org.koin.java.KoinJavaComponent
 
-class AppLauncher : Launcher() {
+class AppLauncher : sg.nphau.android.Launcher() {
 
     //private var initializers = KoinJavaComponent.getKoin().getAll<PluginInitializer>()
 

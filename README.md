@@ -164,7 +164,8 @@ We made an early decision to rewrite the app from scratch to bring it in line wi
 - [Stetho](http://facebook.github.io/stetho/) - debug bridge for applications via Chrome Developer Tools.
 - [Shimmer](https://github.com/facebook/shimmer-android) - Shimmer is an Android library that provides an easy way to add a shimmer effect to any view in your Android app.
 - [Glide](https://github.com/bumptech/glide) - Glide is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
-
+## ✨ Contributing
+Please feel free to contact me or make a pull request.
 ## ⚙️ Copyright
 ```
 Created by $username on $today

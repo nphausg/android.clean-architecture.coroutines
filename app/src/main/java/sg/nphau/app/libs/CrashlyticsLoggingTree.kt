@@ -4,11 +4,11 @@
  * Last modified 31/10/2021, 21:39
  */
 
-package com.nphau.app.libs
+package sg.nphau.app.libs
 
 import android.util.Log
 // import com.google.firebase.crashlytics.FirebaseCrashlytics
-import com.nphau.android.shared.libs.logger.ReleaseLoggingTree
+import sg.nphau.android.shared.libs.logger.ReleaseLoggingTree
 
 class CrashlyticsLoggingTree : ReleaseLoggingTree() {
 

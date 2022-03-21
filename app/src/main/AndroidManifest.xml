@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nphau.app">
+    package="sg.nphau.app">
 
     <application
-        android:name="com.nphau.app.AppLauncher"
+        android:name=".AppLauncher"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +23,7 @@
             android:value="${analyticsEnabled}" />
 
         <activity
-            android:name=".screens.MainActivity"
+            android:name="sg.nphau.app.screens.MainActivity"
             android:exported="true"
             android:screenOrientation="fullSensor"
             android:theme="@style/Clean.Theme">
@@ -39,7 +39,7 @@
         <activity-alias
             android:name="${applicationId}.Launcher"
             android:exported="true"
-            android:targetActivity=".screens.MainActivity">
+            android:targetActivity="sg.nphau.app.screens.MainActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
