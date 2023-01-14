@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'kotlin-allopen'
     id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs.kotlin'
 }
@@ -11,6 +10,8 @@ apply from: '../artifacts.gradle'
 apply from: '../package_dependencies.gradle'
 
 android {
+
+    namespace 'sg.nphau.app'
 
     compileSdk build_versions.target_sdk
 
