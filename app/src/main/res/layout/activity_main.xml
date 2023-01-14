@@ -18,31 +18,48 @@
         app:titleCentered="true"
         app:titleTextAppearance="@style/Clean.Theme.Text.HeadLine" />
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margin_large"
             app:srcCompat="@mipmap/ic_launcher" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Clean.Theme.Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/margin_large"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/common_owner" />
+            android:orientation="vertical">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_welcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Medium" />
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/Clean.Theme.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/common_owner" />
 
-    </LinearLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_time"
+                style="@style/Clean.Theme.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/common_owner" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_medium"
+                android:gravity="center"
+                android:text="Medium" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
 </LinearLayout>

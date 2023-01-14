@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
-    id 'androidx.navigation.safeargs.kotlin'
 }
 //
 apply from: '../artifacts.gradle'
@@ -13,12 +12,12 @@ android {
 
     namespace 'sg.nphau.app'
 
-    compileSdk build_versions.target_sdk
+    compileSdk 33
 
     defaultConfig {
         applicationId "sg.nphau.app"
-        minSdk build_versions.min_sdk
-        targetSdk build_versions.target_sdk
+        minSdk 21
+        targetSdk 33
         versionCode project.hasProperty('versionCode') ? project.property('versionCode') as int : 1
         versionName project.hasProperty('versionName') ? project.property('versionName') : "1.0.0"
         multiDexEnabled true
@@ -47,14 +46,14 @@ android {
             signingConfig signingConfigs.release
             debuggable true
             manifestPlaceholders = [crashlyticsEnabled: true, analyticsEnabled: true]
-            resValue("string", "app_name", "android.templates")
+            resValue("string", "app_name", "Templates")
         }
         debug {
             minifyEnabled false
             signingConfig signingConfigs.debug
             manifestPlaceholders = [crashlyticsEnabled: false, analyticsEnabled: false]
             debuggable true
-            resValue("string", "app_name", "android.templates")
+            resValue("string", "app_name", "Templates")
         }
     }
 
@@ -66,7 +65,8 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8
     }
     buildFeatures {
-        dataBinding = true
-        viewBinding = true
+        dataBinding true
+        viewBinding true
+        compose true
     }
 }

@@ -2,15 +2,15 @@
 
 <p align="center">
 <a>
-    <img src="https://img.shields.io/badge/kotlin-v1.5.31-blue.svg">
-    <img src="https://img.shields.io/badge/gradle-7.0.3-blueviolet.svg">
+    <img src="https://img.shields.io/badge/kotlin-v1.8.0-blue.svg">
+    <img src="https://img.shields.io/badge/gradle-7.4-blueviolet.svg">
     <img src="https://img.shields.io/badge/API-21%2B-blue.svg?style=flat">
     <img src="https://img.shields.io/badge/License-Apache%202.0-success.svg">
     <img src="https://circleci.com/gh/twilio-labs/plugin-rtc.svg?style=svg">
 </a>
 <br/>
 <br/>
-    <a href="https://nphau.medium.com/" target="_blank">
+    <a href="https://imstudio.medium.com/" target="_blank">
         <img src="logo.png"  width="128" margin="8">
     </a>
 </p>
@@ -141,7 +141,7 @@ We used a Repository layer for handling data operations. FUTA's data comes from 
 
 ### Kotlin
 
-[![made-with-Kotlin](https://img.shields.io/badge/Made%20with-Kotlin.v1.5.31-1f425f.svg)](https://kotlinlang.org/)
+[![made-with-Kotlin](https://img.shields.io/badge/Made%20with-Kotlin.v1.6.0-1f425f.svg)](https://kotlinlang.org/)
 
 We made an early decision to rewrite the app from scratch to bring it in line with our thinking about modern Android architecture. Using Kotlin for the rewrite was an easy choice: we liked Kotlin's expressive, concise, and powerful syntax; we found that Kotlin's support for safety features for nullability and immutability made our code more resilient; and we leveraged the enhanced functionality provided by Android Ktx extensions.
 
@@ -164,8 +164,7 @@ We made an early decision to rewrite the app from scratch to bring it in line wi
 - [Stetho](http://facebook.github.io/stetho/) - debug bridge for applications via Chrome Developer Tools.
 - [Shimmer](https://github.com/facebook/shimmer-android) - Shimmer is an Android library that provides an easy way to add a shimmer effect to any view in your Android app.
 - [Glide](https://github.com/bumptech/glide) - Glide is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
-## ✨ Contributing
-Please feel free to contact me or make a pull request.
+
 ## ⚙️ Copyright
 ```
 Created by $username on $today

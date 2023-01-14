@@ -6,11 +6,13 @@
 
 package sg.nphau.app
 
+import android.os.SystemClock
 import androidx.lifecycle.LifecycleOwner
 import org.koin.core.module.Module
 import sg.nphau.android.Launcher
 import sg.nphau.android.shared.ui.theme.ThemeUtils
 import sg.nphau.app.libs.CrashlyticsLoggingTree
+import sg.nphau.app.utils.Lifetime
 
 class AppLauncher : Launcher() {
 
@@ -36,8 +38,8 @@ class AppLauncher : Launcher() {
 
     override fun releaseLoggingTree() = CrashlyticsLoggingTree()
 
-    override fun onPause(owner: LifecycleOwner) {
-        super.onPause(owner)
+    override fun onResume(owner: LifecycleOwner) {
+        super.onResume(owner)
         // initializers.distinct().forEach { it.onEnterBackground() }
     }
 
